@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 
-export default {
+const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,11 +8,18 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage:{
+        Logo : "url('/images/bg_house.jpg')"
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      screens: {
+        'xs': '360px'
+      },
     },
   },
   plugins: [],
-} satisfies Config;
+};
+export default config;
